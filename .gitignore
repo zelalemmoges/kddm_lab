@@ -1,0 +1,11 @@
+# Data and database files
+data/
+*.duckdb
+*.duckdb.wal
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
