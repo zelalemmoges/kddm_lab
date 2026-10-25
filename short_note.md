@@ -1,0 +1,3 @@
+# Short note
+
+The `customer_id` identifies a customer record associated with an order, while `customer_unique_id` groups records belonging to the same underlying customer; therefore, use `COUNT(DISTINCT customer_unique_id)` to count unique customers (96,096 in this dataset). The `order_items` table is the junction table that resolves the many-to-many relationship between `orders` and `products`, and it also records the seller for each item. The customer-record-to-order relationship is stricter in the observed data than a general customer-to-orders model because every `customer_id` has exactly one order in this dataset. The optional zero-to-many relationship from `orders` to `order_items` is justified because 775 orders have no matching item rows.
